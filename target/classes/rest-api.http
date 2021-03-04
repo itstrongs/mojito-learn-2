@@ -1,8 +1,0 @@
-POST http://localhost:8089/test
-Content-Type: application/json
-
-{
-  "buyType": 1
-}
-
-###
