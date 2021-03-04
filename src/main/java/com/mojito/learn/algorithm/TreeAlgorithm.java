@@ -1,55 +1,17 @@
 package com.mojito.learn.algorithm;
 
-import com.alibaba.fastjson.JSON;
 import com.mojito.learn.algorithm.datastructure.TreeNode;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- * 数据结构：树
+ * 树相关
  *
  * @author liufengqiang
  * @date 2021-02-25 23:38:05
  */
 public class TreeAlgorithm {
-
-    private int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-    private static List<TreeNode> nodeList = null;
-
-    public static void main(String[] args) {
-        TreeAlgorithm binTree = new TreeAlgorithm();
-        binTree.createBinTree();
-        TreeNode root = nodeList.get(0);
-
-        System.out.print("先序遍历：");
-        binTree.preOrderTraverse(root);
-        System.out.println();
-
-        System.out.print("中序遍历：");
-        binTree.inOrderTraverse(root);
-        System.out.println();
-
-        System.out.print("后序遍历：");
-        postOrderTraverse(root);
-        System.out.println();
-
-        System.out.println("二叉树最大深度：" + binTree.maxDeath(root));
-        System.out.println("二叉树最小深度：" + binTree.getMinDepth(root));
-        System.out.println("求二叉树中节点的个数：" + binTree.numOfTreeNode(root));
-        System.out.println("求二叉树中叶子节点的个数：" + binTree.numsOfNoChildNode(root));
-        System.out.println("求二叉树中第k层节点的个数：" + binTree.numsOfkLevelTreeNode(root, 3));
-        System.out.println("判断二叉树是否是平衡二叉树：" + binTree.isBalanced(root));
-        System.out.println("广度优先遍历1：" + JSON.toJSONString(binTree.bfs(root)));
-        System.out.println("广度优先遍历2：" + JSON.toJSONString(binTree.levelOrder2(root)));
-    }
-
-    /**
-     * 深度优先遍历
-     */
-//    public int[] dfs(TreeNode root) {
-//
-//    }
 
     /**
      * 广度优先遍历
@@ -197,41 +159,14 @@ public class TreeAlgorithm {
         return result;
     }
 
-    private int maxDeath(TreeNode node) {
+    /**
+     * 二叉树最大深度
+     */
+    public int maxDeath(TreeNode node) {
         if (node == null) {
             return 0;
         }
         return Math.max(maxDeath(node.left), maxDeath(node.right)) + 1;
-    }
-
-    /**
-     * 二叉树构造
-     */
-    public void createBinTree() {
-        nodeList = new LinkedList<>();
-        // 将一个数组的值依次转换为Node节点
-        for (int nodeIndex = 0; nodeIndex < array.length; nodeIndex++) {
-            nodeList.add(new TreeNode(array[nodeIndex]));
-        }
-        // 对前lastParentIndex-1个父节点按照父节点与孩子节点的数字关系建立二叉树
-        for (int parentIndex = 0; parentIndex < array.length / 2 - 1; parentIndex++) {
-            // 左孩子
-            nodeList.get(parentIndex).left = nodeList
-                    .get(parentIndex * 2 + 1);
-            // 右孩子
-            nodeList.get(parentIndex).right = nodeList
-                    .get(parentIndex * 2 + 2);
-        }
-        // 最后一个父节点:因为最后一个父节点可能没有右孩子，所以单独拿出来处理
-        int lastParentIndex = array.length / 2 - 1;
-        // 左孩子
-        nodeList.get(lastParentIndex).left = nodeList
-                .get(lastParentIndex * 2 + 1);
-        // 右孩子,如果数组的长度为奇数才建立右孩子
-        if (array.length % 2 == 1) {
-            nodeList.get(lastParentIndex).right = nodeList
-                    .get(lastParentIndex * 2 + 2);
-        }
     }
 
     /**
