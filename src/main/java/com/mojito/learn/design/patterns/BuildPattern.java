@@ -1,4 +1,4 @@
-package com.mojito.learn.demo.pattern;
+package com.mojito.learn.design.patterns;
 
 import lombok.Data;
 

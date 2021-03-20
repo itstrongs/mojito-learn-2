@@ -8,6 +8,8 @@ package com.mojito.learn.test;
  */
 public class CommonDemo {
 
+    public static CommonTest commonTest = new CommonTest();
+
     public static void main(String[] args) {
         int a = 3;
         Integer b = null;

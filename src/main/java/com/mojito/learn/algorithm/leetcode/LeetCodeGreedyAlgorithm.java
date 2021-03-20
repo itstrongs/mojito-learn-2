@@ -14,4 +14,18 @@ public class LeetCodeGreedyAlgorithm {
     public int findContentChildren(int[] g, int[] s) {
         return 0;
     }
+
+    /**
+     * 1518. 换酒问题
+     */
+    public int numWaterBottles(int numBottles, int numExchange) {
+        int result = numBottles;
+        int empty = numBottles;
+        while (empty >= numExchange) {
+            int num = empty / numExchange;
+            result += num;
+            empty = empty % numExchange + num;
+        }
+        return result;
+    }
 }

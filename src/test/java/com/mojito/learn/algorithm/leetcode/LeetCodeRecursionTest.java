@@ -22,7 +22,7 @@ class LeetCodeRecursionTest {
 
     @Test
     void fib() {
-        System.out.println(leetCodeRecursion.fib(10));
+        System.out.println(leetCodeRecursion.fib(45));
     }
 
     @Test
