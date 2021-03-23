@@ -1,4 +1,4 @@
-package com.mojito.learn.test;
+package com.mojito.learn.demo;
 
 /**
  * description 雪花算法(snowflake) ：分布式环境，生成全局唯一的订单号
@@ -6,7 +6,7 @@ package com.mojito.learn.test;
  * @author liufengqiang <liufengqiang@touchealth.com>
  * @date 2020-04-20 14:26
  */
-public class SnowflakeIdWorker {
+public class SnowflakeIdDemo {
     // ==============================Fields==================
     /** 开始时间截 (2019-08-06) */
     private final long twepoch = 1605533981000L;
@@ -56,7 +56,7 @@ public class SnowflakeIdWorker {
      * @param workerId 工作ID (0~31)
      * @param datacenterId 数据中心ID (0~31)
      */
-    public SnowflakeIdWorker(long workerId, long datacenterId) {
+    public SnowflakeIdDemo(long workerId, long datacenterId) {
         if (workerId > maxWorkerId || workerId < 0) {
             throw new IllegalArgumentException(String.format("worker Id can't be greater than %d or less than 0", maxWorkerId));
         }
@@ -129,7 +129,7 @@ public class SnowflakeIdWorker {
     //==============================Test=============================================
     /** 测试 */
     public static void main(String[] args) {
-        SnowflakeIdWorker idWorker = new SnowflakeIdWorker(0, 0);
+        SnowflakeIdDemo idWorker = new SnowflakeIdDemo(0, 0);
         for (int i = 0; i < 1000; i++) {
             long id = idWorker.nextId();
             System.out.println(Long.toBinaryString(id));

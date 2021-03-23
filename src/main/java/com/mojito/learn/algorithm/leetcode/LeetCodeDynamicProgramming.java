@@ -108,4 +108,16 @@ public class LeetCodeDynamicProgramming {
         }
         return s.substring(start, start + length);
     }
+
+    /**
+     * 10. 正则表达式匹配
+     */
+    public boolean isMatch(String s, String p) {
+        boolean[] dp = new boolean[s.length()];
+        dp[s.length() - 1] = p.contains(String.valueOf(s.charAt(s.length() - 1)));
+        for (int i = 0; i < s.length() - 1; i++) {
+//            dp[i] =
+        }
+        return true;
+    }
 }

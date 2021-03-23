@@ -1,14 +1,14 @@
-package com.mojito.learn.test;
+package com.mojito.learn.algorithm;
 
 import java.util.LinkedList;
 
 /**
- * 数据结构代码实现
+ * 链表实现
  *
  * @author liufengqiang
  * @date 2020-11-05 14:04:30
  */
-public class DataStructuresTest {
+public class ListNodeAlgorithm {
 
     public static void main(String[] args) {
         linkedList();

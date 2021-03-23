@@ -1,4 +1,4 @@
-package com.mojito.learn.test;
+package com.mojito.learn.demo;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
  * @Author: liufengqiang
  * @Date: 2019/7/2
  */
-public class Java8Learn {
+public class Java8ApiDemo {
 
     public static void main(String args[]) {
         System.out.println("使用 Java 7: ");

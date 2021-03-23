@@ -1,4 +1,4 @@
-package com.mojito.learn.test;
+package com.mojito.learn.demo;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
  * @date 2020-04-23 17:19
  */
 @Slf4j
-public final class IdGeneratorUtils {
+public final class IdGeneratorDemo {
 
     private static final Pattern PATTERN_HOSTNAME = Pattern.compile("^.*\\D+([0-9]+)$");
 

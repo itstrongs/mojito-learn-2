@@ -1,6 +1,11 @@
 package com.mojito.learn.algorithm.leetcode;
 
 import com.mojito.learn.algorithm.datastructure.TreeNode;
+import com.mojito.learn.algorithm.leetcode.helper.Employee;
+
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * 力扣 - 深度优先搜索
@@ -50,5 +55,24 @@ public class LeetCodeDfs {
             return 0;
         }
         return Math.max(high(node.left), high(node.right)) + 1;
+    }
+
+    /**
+     * 690. 员工的重要性
+     */
+    public int getImportance(List<Employee> employees, int id) {
+        Map<Integer, Employee> map = employees.stream().collect(Collectors.toMap(o -> o.id, o -> o));
+        Employee employee = map.get(id);
+        dfs(employee, map);
+        return importance;
+    }
+
+    private int importance;
+
+    void dfs(Employee employee, Map<Integer, Employee> map) {
+        importance += employee.importance;
+        if (employee.subordinates != null && employee.subordinates.size() != 0) {
+            employee.subordinates.forEach(o -> dfs(map.get(o), map));
+        }
     }
 }
