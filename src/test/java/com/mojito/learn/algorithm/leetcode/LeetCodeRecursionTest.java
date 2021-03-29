@@ -30,4 +30,9 @@ class LeetCodeRecursionTest {
         TreeNode root = treeDemo.buildTree("[1,2,3]");
         System.out.println(leetCodeRecursion.findTilt(root));
     }
+
+    @Test
+    void numWays() {
+        System.out.println(leetCodeRecursion.numWays(44));
+    }
 }

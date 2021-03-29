@@ -144,9 +144,22 @@ public class LeetCodeRecursion {
             int val = (l1 == null ? 0 : l1.val) + (l2 == null ? 0 : l2.val) + (flag ? 1 : 0);
             l3.val = val % 10;
             l3.next =
-            l3.next = getNodeVal(l1.next, l2.next, l3.next, val > 9);
+                    l3.next = getNodeVal(l1.next, l2.next, l3.next, val > 9);
             return l3;
         }
         return null;
+    }
+
+    /**
+     * 剑指 Offer 10- II. 青蛙跳台阶问题
+     */
+    public int numWays(int n) {
+        int a = 1, b = 1, sum;
+        for (int i = 1; i <= n; i++) {
+            sum = (a + b) % 1000000007;
+            a = b;
+            b = sum;
+        }
+        return a;
     }
 }
