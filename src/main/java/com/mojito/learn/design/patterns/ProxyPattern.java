@@ -13,13 +13,13 @@ import java.lang.reflect.Proxy;
 public class ProxyPattern {
 
     public static void main(String[] args) {
-        //静态代理：代理对象持有被代理对象的引用，增强被代理对象的功能
+        // 静态代理：代理对象持有被代理对象的引用，增强被代理对象的功能
         System.out.println("---------------- 静态代理 ----------------");
         UserProxy userProxy = new UserProxy();
         userProxy.sing();
         userProxy.dance();
 
-        //JDK 动态代理：在内存中生成了新的字节码、通过反射达到代理的目的
+        // JDK 动态代理：在内存中生成了新的字节码、通过反射达到代理的目的
         System.out.println("---------------- 动态代理 ----------------");
         User user = new User();
         JdkProxy jdkProxy = new JdkProxy(user);

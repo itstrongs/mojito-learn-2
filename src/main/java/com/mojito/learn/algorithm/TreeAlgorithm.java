@@ -45,7 +45,7 @@ public class TreeAlgorithm {
      * 二叉树构建
      */
     public TreeNode buildTree(String val) {
-        List<Integer> vals = Arrays.stream(val.substring(1, val.length() - 1).split(","))
+        List<Integer> vals = Arrays.stream(val.split(" "))
                 .map(o -> "null".equals(o.trim()) ? null : Integer.parseInt(o.trim())).collect(Collectors.toList());
         List<TreeNode> nodeList = new LinkedList<>();
         vals.forEach(o -> nodeList.add(o == null ? null : new TreeNode(o)));
