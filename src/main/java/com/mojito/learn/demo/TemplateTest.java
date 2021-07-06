@@ -1,4 +1,4 @@
-package com.mojito.learn.test;
+package com.mojito.learn.demo;
 
 import lombok.Data;
 import org.springframework.context.ConfigurableApplicationContext;

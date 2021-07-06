@@ -1,7 +1,7 @@
-package com.mojito.learn.service;
+package com.mojito.learn.business.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.mojito.learn.pojo.entity.UserTest;
+import com.mojito.learn.business.entity.UserTest;
 
 /**
  * @author liufengqiang

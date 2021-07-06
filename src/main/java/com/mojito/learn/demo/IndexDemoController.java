@@ -1,4 +1,4 @@
-package com.mojito.learn.test;
+package com.mojito.learn.demo;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jdbc.core.JdbcTemplate;

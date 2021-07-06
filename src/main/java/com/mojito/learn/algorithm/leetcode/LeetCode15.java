@@ -1,8 +1,6 @@
 package com.mojito.learn.algorithm.leetcode;
 
 /**
- * 力扣 - 贪心算法
- *
  * @author liufengqiang
  * @date 2021-03-02 10:01:00
  */

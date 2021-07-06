@@ -1,4 +1,4 @@
-package com.mojito.learn.test;//package com.mojito.learn.test;
+package com.mojito.learn.demo;//package com.mojito.learn.test;
 //
 //import lombok.extern.slf4j.Slf4j;
 //

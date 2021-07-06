@@ -1,7 +1,7 @@
-package com.mojito.learn.mapper;
+package com.mojito.learn.business.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.mojito.learn.pojo.entity.UserTest;
+import com.mojito.learn.business.entity.UserTest;
 
 /**
  * @author liufengqiang

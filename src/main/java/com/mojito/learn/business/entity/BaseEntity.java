@@ -1,4 +1,4 @@
-package com.mojito.learn.pojo.entity;
+package com.mojito.learn.business.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;

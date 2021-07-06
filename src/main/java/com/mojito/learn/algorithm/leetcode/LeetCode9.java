@@ -6,8 +6,6 @@ import java.util.Arrays;
 import java.util.Stack;
 
 /**
- * 力扣 - 数组
- *
  * @author liufengqiang
  * @date 2021-03-04 11:05:11
  */

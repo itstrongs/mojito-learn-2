@@ -16,10 +16,20 @@ public class LeetCode2 {
      * 206. 反转链表
      */
     public ListNode reverseList(ListNode head) {
-        while (head.next != null) {
+        ListNode result = new ListNode();
+        return reverseList(head, result);
+    }
 
+    private ListNode reverseList(ListNode head, ListNode result) {
+        if (head == null) {
+            return null;
         }
-        return null;
+
+        ListNode next = reverseList(head.next, result);
+        return new ListNode(head.val,next);
+//        result.val = head.val;
+//        result.next = next;
+//        return result;
     }
 
     /**

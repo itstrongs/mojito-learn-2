@@ -1,7 +1,7 @@
-package com.mojito.learn.controller;
+package com.mojito.learn.business.controller;
 
-import com.mojito.learn.pojo.entity.UserTest;
-import com.mojito.learn.service.UserTestService;
+import com.mojito.learn.business.entity.UserTest;
+import com.mojito.learn.business.service.UserTestService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

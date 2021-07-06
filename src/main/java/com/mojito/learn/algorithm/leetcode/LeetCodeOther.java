@@ -3,8 +3,6 @@ package com.mojito.learn.algorithm.leetcode;
 import com.mojito.learn.algorithm.datastructure.TreeNode;
 
 /**
- * 力扣 - 深度优先搜索
- *
  * @author liufengqiang
  * @date 2021-03-04 12:52:51
  */

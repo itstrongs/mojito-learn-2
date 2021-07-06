@@ -1,9 +1,9 @@
-package com.mojito.learn.service.impl;
+package com.mojito.learn.business.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.mojito.learn.mapper.UserTestMapper;
-import com.mojito.learn.pojo.entity.UserTest;
-import com.mojito.learn.service.UserTestService;
+import com.mojito.learn.business.mapper.UserTestMapper;
+import com.mojito.learn.business.entity.UserTest;
+import com.mojito.learn.business.service.UserTestService;
 import org.springframework.stereotype.Service;
 
 /**

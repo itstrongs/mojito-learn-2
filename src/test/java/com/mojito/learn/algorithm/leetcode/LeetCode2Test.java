@@ -2,6 +2,7 @@ package com.mojito.learn.algorithm.leetcode;
 
 import com.alibaba.fastjson.JSON;
 import com.mojito.learn.algorithm.common.TreeAlgorithm;
+import com.mojito.learn.algorithm.datastructure.ListNode;
 import com.mojito.learn.algorithm.datastructure.TreeNode;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -19,6 +20,11 @@ class LeetCode2Test {
     void init() {
         treeDemo = new TreeAlgorithm();
         leetCode = new LeetCode2();
+    }
+
+    @Test
+    void reverseList() {
+        System.out.println(leetCode.reverseList(ListNode.build("[1,2,3,4,5]")));
     }
 
     @Test

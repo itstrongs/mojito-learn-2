@@ -1,8 +1,6 @@
 package com.mojito.learn.algorithm.leetcode;
 
 /**
- * 动态规划
- *
  * @author liufengqiang
  * @date 2021-03-04 17:33:15
  */

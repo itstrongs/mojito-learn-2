@@ -1,4 +1,4 @@
-package com.mojito.learn.test;
+package com.mojito.learn.demo;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
